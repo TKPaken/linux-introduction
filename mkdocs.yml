@@ -1,0 +1,74 @@
+site_name: Introduction to Linux
+site_url: https://tkpaken.github.io/linux-introduction/
+repo_url: https://github.com/TKPaken/linux-introduction/
+repo_name: TKPaken/linux-introduction
+site_author: 筑駒パ研
+site_description: >-
+  筑駒パ研の新入生用 Linux 入門サイト
+theme:
+  name: material
+  custom_dir: overrides
+  language: ja
+  favicon: assets/avatar.png
+  features:
+    - navigation.tabs
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/TKPaken/linux-introduction
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/tk_paken
+
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  
+plugins:
+  - search
+  - git-revision-date-localized
+
+nav:
+  - Home: index.md
+  - 第 0 章 準備:
+    - overview: chapter0/index.md
+    - for Windows: chapter0/windows.md
+    - for Mac: chapter0/mac.md
