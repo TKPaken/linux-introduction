@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://tkpaken.github.io/linux-introduction/sitemap.xml
